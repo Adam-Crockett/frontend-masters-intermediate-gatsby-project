@@ -1,7 +1,7 @@
 
 const fetch = require('node-fetch');
 const { createRemoteFileNode } = require('gatsby-source-filesystem');
-// const slugify = require('slugify');
+const slugify = require('slugify');
 
 const authors = require('./src/data/authors.json');
 const books = require('./src/data/books.json');
@@ -75,29 +75,29 @@ exports.createPages = async ({ actions, graphql }) => {
 
     const books = result.data.allBook.nodes;
 
-//   books.forEach((book) => {
-//     const bookSlug = slugify(book.name, { lower: true });
+    books.forEach((book) => {
+        const bookSlug = slugify(book.name, { lower: true });
 
-//     if (book.series === null) {
-//       createPage({
-//         path: `/book/${bookSlug}`,
-//         component: require.resolve('./src/templates/book.js'),
-//         context: {
-//           id: book.id,
-//         },
-//       });
-//     } else {
-//       const seriesSlug = slugify(book.series, { lower: true });
+        if (book.series === null) {
+        createPage({
+            path: `/book/${bookSlug}`,
+            component: require.resolve('./src/templates/book.js'),
+            context: {
+            id: book.id,
+            },
+        });
+        } else {
+        const seriesSlug = slugify(book.series, { lower: true });
 
-//       createPage({
-//         path: `/book/${seriesSlug}/${bookSlug}`,
-//         component: require.resolve('./src/templates/book.js'),
-//         context: {
-//           id: book.id,
-//         },
-//       });
-//     }
-//   });
+        createPage({
+            path: `/book/${seriesSlug}/${bookSlug}`,
+            component: require.resolve('./src/templates/book.js'),
+            context: {
+            id: book.id,
+            },
+        });
+        }
+    });
 };
   
 
