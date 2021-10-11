@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/adamcrockett/.nvm/versions/node/v16.6.1/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js add slugify @1.6.0
+  /Users/adamcrockett/.nvm/versions/node/v16.6.1/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js add gatsby-shared-nav@*
 
 PATH: 
   /Users/adamcrockett/.nvm/versions/node/v16.6.1/bin:/Users/adamcrockett/.nvm/versions/node/v12.22.6/bin:/Users/adamcrockett/.nvm/versions/node/v14.18.0/bin:/Users/adamcrockett/.nvm/versions/node/v16.6.1/bin:/Users/adamcrockett/.nvm/versions/node/v16.10.0/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/adamcrockett/.nvm/versions/node/v16.10.0/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/opt/local/bin:/opt/local/sbin
@@ -14,8 +14,8 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@1.6.0: Request "https://registry.yarnpkg.com/@1.6.0" returned a 405
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:66997:18)
+  Error: https://registry.yarnpkg.com/gatsby-shared-nav: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:66988:18)
       at Request.self.callback (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:140749:22)
       at Request.emit (node:events:394:28)
       at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:141721:10)
@@ -53,7 +53,7 @@ npm manifest:
       "node-fetch": "^2.6.1",
       "react": "^17.0.1",
       "react-dom": "^17.0.1",
-      "slugify": "^1.6.0"
+      "slugify": "^1.6.1"
     }
   }
 
@@ -5346,7 +5346,7 @@ Lockfile:
       "@babel/core" "^7.15.5"
       "@babel/runtime" "^7.15.4"
   
-  gatsby@^3.11.0:
+  gatsby@^3.11.0, gatsby@^3.14.2:
     version "3.14.2"
     resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.14.2.tgz#684a49ed9521abe5e72ff36b1fc3a4ed96fee0fb"
     integrity sha512-1cjyfGkQ9zXtou+RhtYBprv8nYXTPuRIs4IFzBP373vBD1CdwabAC/R8kjqHfdvyNrorzg3sqRjLjActtfU8NA==
@@ -9520,7 +9520,7 @@ Lockfile:
       astral-regex "^2.0.0"
       is-fullwidth-code-point "^3.0.0"
   
-  slugify@^1.4.4, slugify@^1.6.0:
+  slugify@^1.4.4, slugify@^1.6.1:
     version "1.6.1"
     resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.1.tgz#a5fcaef29f4e57c6e932ce7044b6ffd9cf81b641"
     integrity sha512-5ofqMTbetNhxlzjYYLBaZFQd6oiTuSkQlyfPEFIMwgUABlZQ0hbk5xIV9Ydd5jghWeRoO7GkiJliUvTpLOjNRA==
